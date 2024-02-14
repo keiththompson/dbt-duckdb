@@ -30,7 +30,7 @@
 
   -- build model
   {% call statement('main', language=language) -%}
-    {{- create_table_as(False, intermediate_relation, compiled_code, language) }}
+    {{- create_table_as(True, intermediate_relation, compiled_code, language) }}
   {%- endcall %}
 
   -- cleanup
